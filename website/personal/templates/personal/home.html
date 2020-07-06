@@ -1,0 +1,85 @@
+{% extends "personal/header.html" %}
+
+
+
+{% block content %}
+
+<div id="particles-js" style="position: fixed;top: 0"></div>
+<div class="container-fluid">
+
+	
+		<!-- stats - count particles -->
+<!-- 		<div class="count-particles">
+  		<span class="js-count-particles"></span>
+  		</div> -->
+	
+
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6" style="margin-top: 5%; margin-left: 5%">
+						<blockquote style="color:#edf2f4; ">
+							<h1>Hi, I'm Rifqi Prabantoro</h1>
+						
+						</blockquote>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12" style="margin-top: 10%">
+
+						<div id="page_wrap">	
+							<div class="banner">
+								<div class="typed_wrap">
+									<div id="typed-strings">
+
+							 
+									</div>
+									<p style="color: #edf2f4; font-size: 20px; font-size: 200%"><b style="font-size: 25px">$</b> <span id="typed" style="color: #f6f6f6"></span></p>
+
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+<!-- typed js -->
+	<script>
+	  var typed = new Typed("#typed", {
+	     strings: ['I am a <b>Gamer</b>.', 'I am a <strong>Student</strong>.','I am a <i>LINUX</i> <b>geek</i>.', 'Love to learns new things.','And above all of that','I Love You',';)'],
+	    /*stringsElement: '#typed-strings',*/
+	   typeSpeed: 50,
+		startDelay: 1500,
+		backSpeed: 50,
+		backDelay: 1000,
+		loop: true,
+		loopCount: false,
+		showCursor: true,
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+
+	  });
+	</script>
+
+
+{% endblock %}

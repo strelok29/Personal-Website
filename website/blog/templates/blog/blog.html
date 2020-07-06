@@ -1,0 +1,15 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+	<div class="container-fluid">
+	{% load staticfiles %}
+	<img src="{% static 'blog/img/banner.png'%}" class="img-responsive" alt="Responsive image" style="position: fixed; top: -5%;left: 0%; width: 100%; clip:rect(0%,0%,50%,0%); ">
+
+	</div>
+	<div class="container-fluid" style="margin-top: 5%;">
+	{% for post in object_list %}
+		<h5>{{ post.date|date:"d-m-Y" }}<a href="/blog/{{post.id}}"> {{post.title}} </a></h5>
+	{% endfor %}
+	</div>
+	
+{% endblock%}
