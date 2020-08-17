@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: web
+          image: 072831431176.dkr.ecr.ap-southeast-1.amazonaws.com/rifqi.xyz:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: registry-creds-ecr
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: registry-creds-ecr
+                  key: AWS_SECRET_ACCESS_KEY
+            - name: awsaccount
+              valueFrom:
+                secretKeyRef:
+                  name: registry-creds-ecr
+                  key: AWS_ACCOUNT
+            - name: awsregion
+              value: ap-southeast-1

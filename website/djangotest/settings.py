@@ -25,7 +25,7 @@ SECRET_KEY = '2=1ajus6@_qr@(a1(phmh%64oi&n$7ltin&-#j*_hxvy_083bx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.rifqi.xyz","rifqi-website","13.229.132.13","rifqi.xyz"]
+ALLOWED_HOSTS = ["www.rifqi.xyz","rifqi-website","13.229.132.13","rifqi.xyz","192.168.99.100"]
 
 
 # Application definition
