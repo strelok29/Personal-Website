@@ -16,7 +16,7 @@ services:
   rifqi-website:
     restart : always
     build :
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./website
     volumes: 
       - ./website:/website
