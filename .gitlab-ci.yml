@@ -3,26 +3,28 @@ stages:
   - test
   - deploy
 
-build:
-  stage: build
-  tags: 
-    - labrifqi
-  script:
-    - cd /home/ubuntu/Personal-Website
-    - sudo git pull
-  artifacts:
-    paths: 
-      - build/
-  environment:
-    name: dev
-    url: https://rifqi.xyz
-  
 
-test:
-  stage: test
+build master:
+  stage: build
   script:
-    - echo "Testing"
-    - test -f "build/info.txt" 
-  environment:
-    name: test
-    url: http://lab.rifqi.xyz
+    - cd website
+    - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
+    - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
+  only:
+    - master
+  tags:
+    - docker
+
+# deploy master:
+#   stage: deploy
+#   only:
+#     - master
+#   tags: 
+#     - labrifqi
+#   script:
+#     - cd /home/ubuntu/Personal-Website
+#     - sudo git pull
+#   environment:
+#     name: dev
+#     url: https://rifqi.xyz
+  
