@@ -9,7 +9,7 @@ build master:
   services:
     - docker:19.03.9-dind
   before_script:
-    - apt install awscli
+    - apt-get install awscli
     - apt-get install python3-pip
     - pip3 install --upgrade awscli
   script:
