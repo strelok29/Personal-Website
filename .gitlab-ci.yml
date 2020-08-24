@@ -10,7 +10,7 @@ build master:
     - docker:19.03.9-dind
   before_script:
     - docker run --rm -d amazon/aws-cli:2.0.6
-    - alias aws='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
+    - alias aws='docker run --rm -i -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
     - aws --version
   script:
     - export DOCKER_HOST=$DOCKER_PORT
