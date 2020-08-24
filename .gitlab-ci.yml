@@ -9,7 +9,7 @@ build:
     - labrifqi
   script:
     - cd /home/ubuntu/lab
-    - git pull
+    - git pull https://gitlab.com/strelok29/Personal-Website
   artifacts:
     paths: 
       - build/
