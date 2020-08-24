@@ -17,6 +17,7 @@ services:
     restart : always
     build :
       dockerfile: _DOCKERFILE_
+      context: ./website
     volumes: 
       - ./website:/website
     ports:  
