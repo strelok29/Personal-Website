@@ -12,7 +12,7 @@ build master:
     - apk add --no-cache curl jq python py-pip
     - pip install awscli
   script:
-    - $(aws ecr get-login --no-include-email --region ap-southeast-1)
+    - sudo $(aws ecr get-login --no-include-email --region ap-southeast-1)
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
   only:
