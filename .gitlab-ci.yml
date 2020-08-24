@@ -9,7 +9,7 @@ build:
     - labrifqi
   script:
     - cd /home/ubuntu/
-    - mkdir lab
+    - sudo mkdir lab
     - cd lab
     - git pull
   artifacts:
