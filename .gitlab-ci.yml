@@ -8,8 +8,8 @@ build:
   tags: 
     - labrifqi
   script:
-    - cd /home/ubuntu/lab
-    - sudo git clone https://gitlab.com/strelok29/Personal-Website.git
+    - cd /home/ubuntu/Personal-Website
+    - git pull
   artifacts:
     paths: 
       - build/
