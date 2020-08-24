@@ -6,6 +6,9 @@ stages:
 
 build master:
   stage: build
+  image: docker:19.03.9-dind
+  services:
+    - docker:19.03.9-dind
   script:
     - cd website
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
