@@ -8,9 +8,10 @@ build:
   tags: 
     - labrifqi
   script:
-    - echo "Building"
-    - mkdir build
-    - touch build/info.txt
+    - cd /home/ubuntu/
+    - mkdir lab
+    - cd lab
+    - git pull
   artifacts:
     paths: 
       - build/
