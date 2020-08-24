@@ -11,8 +11,9 @@ build master:
   before_script:
     - apk add --no-cache curl jq python py-pip
     - pip install awscli
+    - aws --version
   script:
-    - aws ecr get-login-password --region ap-southeast-1 | docker login --username rifq29@outlook.com --password-stdin $REPOSITORY_URL
+    - $(aws ecr get-login-password --region ap-southeast-1)
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
   only:
