@@ -5,10 +5,11 @@ stages:
 
 build master:
   stage: build
-  image: amazon/aws-cli:2.0.6
+  image: docker:19.03.9-dind
   services:
-    - amazon/aws-cli:2.0.6
+    - docker:19.03.9-dind
   before_script:
+    - docker run --rm -it amazon/aws-cli:2.0.6 --version
     - aws --version
   script:
     - export DOCKER_HOST=$DOCKER_PORT
