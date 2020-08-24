@@ -9,7 +9,11 @@ build master:
   image: docker:19.03.9-dind
   services:
     - docker:19.03.9-dind
+  before_script:
+    - apk add --no-cache curl jq python py-pip
+    - pip install awscli
   script:
+    - $(aws ecr get-login --no-include-email --region ap-southeast-1)
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
   only:
