@@ -10,13 +10,12 @@ build master:
   services:
     - docker:19.03.9-dind
   script:
-    - cd website
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
   only:
     - master
   tags:
-    - labrifqi
+    - docker
 
 # deploy master:
 #   stage: deploy
