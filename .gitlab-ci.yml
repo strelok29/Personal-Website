@@ -1,9 +1,12 @@
 stages:
   - build
   - test
+  - deploy
 
 build:
   stage: build
+  tags: 
+    - labrifqi
   script:
     - echo "Building"
     - mkdir build
@@ -11,9 +14,16 @@ build:
   artifacts:
     paths: 
       - build/
+  environment:
+    name: dev
+    url: http://lab.rifqi.xyz
+  
 
 test:
   stage: test
   script:
     - echo "Testing"
     - test -f "build/info.txt" 
+  environment:
+    name: test
+    url: http://lab.rifqi.xyz

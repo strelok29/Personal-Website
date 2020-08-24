@@ -3,30 +3,31 @@
 {% block content %}
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type = "text/css"/>
-<script type="text/javascript " src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript " src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script> -->
 
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'personal/css/timeline.css' %}" type = "text/css"/>
-<script type="text/javascript" src="{% static 'personal/js/timeline.js' %}"></script>
 
 <header>
     <div class="container text-center">
       <h1>The Story so Far</h1>
       <p>Rifqi Prabantoro</p>
     </div>
-  </header>
-  
+    <link rel="stylesheet" href="{% static 'personal/css/timeline.css' %}" type = "text/css"/>
+    <!-- <script type="text/javascript" src="{% static 'personal/js/scrollreveal.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'personal/js/timeline.js' %}"></script> -->
+</header>
+ <body> 
   <section class="timeline">
     <div class="container">
       <div class="timeline-item">
         <div class="timeline-img"></div>
   
         <div class="timeline-content js--fadeInLeft">
-          <h2>Title</h2>
-          <div class="date">1 MAY 2016</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+          <h2>Born Time, Yeyy</h2>
+          <div class="date">November 1996</div>
+          <p>My journey started the time i was born :)</p>
+            
         </div>
       </div> 
   
@@ -35,12 +36,12 @@
         <div class="timeline-img"></div>
   
         <div class="timeline-content timeline-card js--fadeInRight">
-          <div class="timeline-img-header">
-            <h2>Card Title</h2>
+          <div class="timeline-img-header" style="background:url(https://s3.amazonaws.com/mline/wp-content/uploads/2020/01/20211240/IMG_20200120_203553-696x381.jpg) top center no-repeat;">
+            <h2>School Time!!</h2>
           </div>
-          <div class="date">25 MAY 2016</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+          <div class="date">June 2003</div>
+          <p>Just start my first education degree. yes, the elementary school. boi need to study at school</p>
+            
         </div>
   
       </div>   
@@ -50,9 +51,9 @@
         <div class="timeline-img"></div>
   
         <div class="timeline-content js--fadeInLeft">
-          <div class="date">3 JUN 2016</div>
-          <h2>Quote</h2>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+          <div class="date">One day in 2007</div>
+          <h2>My First PC</h2>
+          <blockquote>OMG!! My First PC, what a day. I can't sleep the day before my PC arrive (True Story belive me :))</blockquote>
         </div>
       </div>   
   
@@ -64,7 +65,7 @@
           <h2>Title</h2>
           <div class="date">22 JUN 2016</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+            
         </div>
       </div>   
   
@@ -78,7 +79,7 @@
           </div>
           <div class="date">10 JULY 2016</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+            
         </div>
       </div>   
   
@@ -92,7 +93,7 @@
           </div>
           <div class="date">30 JULY 2016</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+            
         </div>
       </div>  
   
@@ -117,7 +118,7 @@
           </div>
           <div class="date">19 AUG 2016</div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+            
         </div>
       </div>  
   
@@ -129,7 +130,7 @@
           <div class="date">1 SEP 2016</div>
           <h2>Title</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
+            
         </div>
       </div>   
   
@@ -137,5 +138,6 @@
   
     </div>
   </section>
-<!-- comment -->
+  </body>
+
 {% endblock %}

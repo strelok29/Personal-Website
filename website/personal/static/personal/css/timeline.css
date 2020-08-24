@@ -7,7 +7,7 @@ section {
   }
   
   body {
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-size: 17px;
     font-weight: 400;
     background-color: #eee;
@@ -26,7 +26,7 @@ section {
     padding: 150px 0;
   } */
   header p {
-    font-family: "Allura";
+    font-family: 'Allura';
     color: rgba(255, 255, 255, 0.2);
     margin-bottom: 0;
     font-size: 60px;
@@ -37,7 +37,7 @@ section {
     position: relative;
   }
   .timeline::before {
-    content: "";
+    content: '';
     background: #C5CAE9;
     width: 5px;
     height: 95%;
@@ -59,7 +59,7 @@ section {
     left: 0;
   }
   .timeline-item:nth-child(even) .timeline-content::after {
-    content: "";
+    content: '';
     position: absolute;
     border-style: solid;
     width: 0;
@@ -70,7 +70,7 @@ section {
     border-color: transparent #f5f5f5 transparent transparent;
   }
   .timeline-item::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
@@ -84,7 +84,7 @@ section {
     box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
   }
   .timeline-content::after {
-    content: "";
+    content: '';
     position: absolute;
     border-style: solid;
     width: 0;
@@ -98,7 +98,7 @@ section {
   .timeline-img {
     width: 30px;
     height: 30px;
-    background: #3F51B5;
+    background: #d90429;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -106,6 +106,13 @@ section {
     margin-left: -15px;
   }
   
+  .timeline-content p {
+    color: #1c1d1f;
+  }
+
+  .timeline-content h2 {
+    color: #1c1d1f;
+  }
   /* a {
     background: #3F51B5;
     color: #FFFFFF;
@@ -121,8 +128,8 @@ section {
   a:hover, a:active, a:focus {
     background: #32408f;
     color: #FFFFFF;
-    text-decoration: none; */
-  }
+    text-decoration: none;
+  } */
   
   .timeline-card {
     padding: 0 !important;
@@ -135,7 +142,7 @@ section {
   }
   
   .timeline-item .timeline-img-header {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat;
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat; */
     background-size: cover;
   }
   
@@ -184,7 +191,7 @@ section {
       float: none;
     }
     .timeline .timeline-item:nth-child(odd) .timeline-content::after {
-      content: "";
+      content: '';
       position: absolute;
       border-style: solid;
       width: 0;
@@ -195,3 +202,4 @@ section {
       border-color: transparent #f5f5f5 transparent transparent;
     }
   }
+  
