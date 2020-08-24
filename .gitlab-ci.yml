@@ -9,7 +9,7 @@ build master:
   services:
     - docker:19.03.9-dind
   before_script:
-    - docker run --rm -it amazon/aws-cli:2.0.6 --version
+    - docker run --rm -d amazon/aws-cli:2.0.6
     - aws --version
   script:
     - export DOCKER_HOST=$DOCKER_PORT
