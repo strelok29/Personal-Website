@@ -26,16 +26,18 @@ build master:
   tags:
     - docker
 
-# deploy master:
-#   stage: deploy
-#   only:
-#     - master
-#   tags: 
-#     - labrifqi
-#   script:
-#     - cd /home/ubuntu/Personal-Website
-#     - sudo git pull
-#   environment:
-#     name: dev
-#     url: https://rifqi.xyz
+deploy master:
+  stage: deploy
+  only:
+    - master
+  tags: 
+    - labrifqi
+  script:
+    - cd /home/ubuntu/Personal-Website
+    - sudo git pull
+    - sed 's/_VERSION_/'"$REPOSITORY_URL:$CI_COMMIT_SHA"'/g' docker-compose.yml > docker-compose.yml
+    - docker-compose up --build
+  environment:
+    name: dev
+    url: https://rifqi.xyz
   
