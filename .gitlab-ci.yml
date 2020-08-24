@@ -19,7 +19,7 @@ build master:
   only:
     - master
   tags:
-    - docker
+    - labrifqi
 
 # deploy master:
 #   stage: deploy
