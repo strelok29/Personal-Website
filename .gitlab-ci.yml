@@ -10,7 +10,7 @@ build master:
     - docker:19.03.9-dind
   before_script:
     - apk add --no-cache curl jq python py-pip
-    - pip install awscli
+    - pip3 install awscli
     - aws --version
   script:
     - export DOCKER_HOST=$DOCKER_PORT
