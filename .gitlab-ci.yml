@@ -31,7 +31,7 @@ deploy master:
   only:
     - master
   tags: 
-    - labrifqi
+    - docker
   script:
     - cd /home/ubuntu/Personal-Website
     - sudo git pull
