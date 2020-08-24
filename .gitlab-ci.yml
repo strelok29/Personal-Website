@@ -15,7 +15,9 @@ build master:
   script:
     - export DOCKER_HOST=$DOCKER_PORT
 #    - $(aws ecr get-login )
-    - aws configure
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - aws configure set default.region $AWS_DEFAULT_REGION
     - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin $REPOSITORY_URL
     - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA .
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
