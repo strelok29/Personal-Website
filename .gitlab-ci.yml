@@ -40,9 +40,9 @@ deploy master:
   script:
     - cd /home/ubuntu/Personal-Website
     - sudo git pull
-    - sed 's/_VERSION_/'"$REPOSITORY_URL:latest"'/g' docker-compose.tpl.yml > docker-compose.yml;
+    - sudo sed -e "s/_VERSION_/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml > docker-compose.yml;
     - sudo docker-compose up --build
   environment:
-    name: dev
+    name: prod
     url: https://rifqi.xyz
   
