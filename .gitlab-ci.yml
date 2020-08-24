@@ -8,9 +8,7 @@ build:
   tags: 
     - labrifqi
   script:
-    - cd /home/ubuntu/
-    - sudo mkdir lab
-    - cd lab
+    - cd /home/ubuntu/lab
     - git pull
   artifacts:
     paths: 
