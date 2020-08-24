@@ -19,7 +19,7 @@ build master:
     - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
     - aws configure set default.region $AWS_DEFAULT_REGION
     - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin $REPOSITORY_URL
-    - docker build -t $REPOSITORY_URL:CI_COMMIT_SHA ./website
+    - docker build -t $REPOSITORY_URL:$CI_COMMIT_SHA ./website
     - docker push $REPOSITORY_URL:$CI_COMMIT_SHA
   only:
     - master
