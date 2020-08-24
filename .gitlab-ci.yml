@@ -9,13 +9,13 @@ build:
     - labrifqi
   script:
     - cd /home/ubuntu/Personal-Website
-    - git pull
+    - sudo git pull
   artifacts:
     paths: 
       - build/
   environment:
     name: dev
-    url: http://lab.rifqi.xyz
+    url: https://rifqi.xyz
   
 
 test:
