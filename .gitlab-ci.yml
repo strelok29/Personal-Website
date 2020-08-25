@@ -40,7 +40,7 @@ deploy master:
   script:
     - cd /home/ubuntu/Personal-Website
     - sudo git pull
-    - sudo sed -e "s/_DOCKERFILE_/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml
+    - sudo sed -e "s/_DOCKERFILE_/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml > docker-compose.yml
     - sudo docker-compose up --build
   environment:
     name: prod
