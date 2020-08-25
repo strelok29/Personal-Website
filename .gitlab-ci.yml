@@ -42,8 +42,11 @@ deploy master:
     - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
     - aws configure set default.region $AWS_DEFAULT_REGION
   script:
-    - echo "$SSL_CERT" > nginx/certs/certificate.crt
-    - echo "$SSL_PK" > nginx/certs/private.key
+    - rm -f nginx/certs/certificate.crt
+    - rm -f nginx/certs/private.key
+    - touch nginx/certs/certificate.crt nginx/certs/private.key
+    - echo $SSL_CERT > nginx/certs/certificate.crt
+    - echo $SSL_PK > nginx/certs/private.key
     - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin $REPOSITORY_URL
     - export DOCKER_HOST=$DOCKER_PORT
     - sed 's|DOCKERFILE|'"$REPOSITORY_URL":"$CI_COMMIT_SHA"'|g' docker-compose.tpl.yml > docker-compose.yml;
