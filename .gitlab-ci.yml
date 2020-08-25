@@ -38,7 +38,7 @@ deploy master:
   tags: 
     - shell
   script:
-    - sudo git pull
+    - sudo git pull origin master
   #  - echo sed -i -E "s/DOCKERFILE/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml > docker-compose.yml
     - sudo sed 's/DOCKERFILE/'"$REPOSITORY_URL:latest"'/g' docker-compose.tpl.yml > /home/ubuntu/Personal-Website/docker-compose.yml
   #  - sudo docker-compose up --build
