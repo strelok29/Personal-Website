@@ -38,6 +38,7 @@ deploy master:
   tags: 
     - shell
   script:
+    - export DOCKER_HOST=$DOCKER_PORT
     - sudo git pull origin master
   #  - echo sed -i -E "s/DOCKERFILE/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml > docker-compose.yml
     - sed 's|DOCKERFILE|'"$REPOSITORY_URL":latest'|g' docker-compose.tpl.yml > docker-compose.yml;
