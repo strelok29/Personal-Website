@@ -16,7 +16,7 @@ services:
   rifqi-website:
     restart : always
     build :
-      dockerfile: _DOCKERFILE_
+      dockerfile: :latest
     volumes: 
       - ./website:/website
     ports:  
