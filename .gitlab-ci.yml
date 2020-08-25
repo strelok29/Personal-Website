@@ -42,6 +42,7 @@ deploy master:
   #  - echo sed -i -E "s/DOCKERFILE/$REPOSITORY_URL:latest/g" docker-compose.tpl.yml > docker-compose.yml
     - echo sed 's/DOCKERFILE/'"$REPOSITORY_URL:latest"'/g' docker-compose.tpl.yml > docker-compose.yml
   #  - sudo docker-compose up --build
+    - docker-compose up -d --build
   environment:
     name: prod
     url: https://rifqi.xyz
