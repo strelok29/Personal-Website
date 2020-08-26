@@ -1,3 +1,3 @@
 # Personal-Website
 
-Based on Django
+Based on Django Framework
